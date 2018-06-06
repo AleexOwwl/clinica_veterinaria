@@ -68,7 +68,8 @@ class NuevoPacienteTest(unittest.TestCase):
  		table = self.browser.find_element_by_id('id_list_table')
  		rows = table.find_elements_by_tag_name('tr')
  		self.assertTrue(
- 			any(row.text == '1: Booster / Alex / 2018-06-06' for row in rows)
+ 			any(row.text == '1: Booster / Alex / 2018-06-06' for row in rows),
+ 			"Nueva cita para mascota no apareció en la tabla"
  		)
 
 		self.fail('Prueba terminada!!!')
